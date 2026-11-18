@@ -1,85 +1,156 @@
 # LEWOdata
-This data was collected May - June 2023 via conducting point counts for Lewis's woodpeckers (Melanerpes lewis) in burned forests located within Deschutes National Forest and White River Wildlife Area in the east Cascades of Oregon. 
 
+## Project Overview
 
+This repository contains data collected during May–June 2023 through point-count surveys of Lewis's Woodpeckers (*Melanerpes lewis*) in burned forests within the Deschutes National Forest and White River Wildlife Area in the eastern Cascades of Oregon.
 
-Variables
-PointID: alphabetical code to identify survey point
-PointCode: numerical code to identify survey point
-TransectID: the transect in which the points were located
-Rep1: replicate one of point count surveys
-Rep2: replicate two of point count surveys
-Rep3: replicate three of point count surveys
-JDR1: Julian date of replicate 1
-MinsSinceR1: Minutes since sunrise (the time the survey was started) of replicate 1
-JDR2: Julian date of replicate 2
-MinsSinceR2: Minutes since sunrise (the time the survey was started) of replicate 2
-JDR3: Julian date of replicate 3
-MinsSinceR3: Minutes since sunrise (the time the survey was started) of replicate 3
-JDR1S: Julian date of replicate 1, centered and scaled for analysis
-JDR2S: Julian date of replicate 2, centered and scaled for analysis
-JDR3S: Julian date of replicate 3, centered and scaled for analysis
-MinScR1: Minutes since sunrise (the time the survey was started) of replicate 1, centered and scaled for analysis
-MinsScR2: Minutes since sunrise (the time the survey was started) of replicate 2, centered and scaled for analysis
-MinsScR3: Minutes since sunrise (the time the survey was started) of replicate 3, centered and scaled for analysis
-ObserverR1: who conducted the survey, replicate 1
-ObserverR2: who conducted the survey, replicate 2
-ObserverR3: who conducted the survey, replicate 3
-WPR1: presence (1) or absence (0) of another woodpecker species at the point during the survey, replicate 1
-WPR2: presence (1) or absence (0) of another woodpecker species at the point during the survey, replicate 2
-WPR3: presence (1) or absence (0) of another woodpecker species at the point during the survey, replicate 3
-WindR1: wind speed based on the Beaufort scale during survey, replicate 1
-WindR2: wind speed based on the Beaufort scale during survey, replicate 2
-WindR3: wind speed based on the Beaufort scale during survey, replicate 3
-Latitude: location of point, latitude
-Longitude: location of point, longitude
-y_proj: latitude projection
-x_proj: longitude projection
-FireSev: categorized burn severity at point, derived from the MTBS rDnBR6 raster 
-FireName: identifying name of wildfire
-FireYear.x: year the fire burned
-coh_c2_100: cohesion index of burn severity class 2 at a 100m spatial scale around the point
-coh_c3_100: cohesion index of burn severity class 3 at a 100m spatial scale around the point
-coh_c4_100: cohesion index of burn severity class 4 at a 100m spatial scale around the point
-coh_c2_300: cohesion index of burn severity class 2 at a 300m spatial scale around the point
-coh_c3_300: cohesion index of burn severity class 3 at a 300m spatial scale around the point
-coh_c4_300: cohesion index of burn severity class 4 at a 300m spatial scale around the point
-coh_c2_600: cohesion index of burn severity class 2 at a 600m spatial scale around the point
-coh_c3_600: cohesion index of burn severity class 3 at a 600m spatial scale around the point
-coh_c4_600: cohesion index of burn severity class 3 at a 600m spatial scale around the point
-cnn_c2_100: connectivity index of burn severity class 2 at 100m spatial scale around the point
-cnn_c3_100: connectivity index of burn severity class 3 at 100m spatial scale around the point
-cnn_c4_100: connectivity index of burn severity class 4 at 100m spatial scale around the point
-cnn_c2_300: connectivity index of burn severity class 2 at 300m spatial scale around the point
-cnn_c3_300: connectivity index of burn severity class 3 at 300m spatial scale around the point
-cnn_c4_300: connectivity index of burn severity class 4 at 300m spatial scale around the point
-cnn_c2_600: connectivity index of burn severity class 2 at 600m spatial scale around the point
-cnn_c3_600: connectivity index of burn severity class 3 at 600m spatial scale around the point
-cnn_c4_600: connectivity index of burn severity class 4 at 600m spatial scale around the point
-ctg_c2_100: contiguity index of burn severity class 2 at 100m spatial scale around the point
-ctg_c3_100: contiguity index of burn severity class 3 at 100m spatial scale around the point
-ctg_c4_100: contiguity index of burn severity class 4 at 100m spatial scale around the point
-ctg_c2_300: contiguity index of burn severity class 2 at 300m spatial scale around the point
-ctg_c3_300: contiguity index of burn severity class 3 at 300m spatial scale around the point
-ctg_c4_300: contiguity index of burn severity class 4 at 300m spatial scale around the point
-ctg_c2_600: contiguity index of burn severity class 2 at 600m spatial scale around the point
-ctg_c3_600: contiguity index of burn severity class 3 at 600m spatial scale around the point
-ctg_c4_600: contiguity index of burn severity class 4 at 600m spatial scale around the point
-FireSevMW100: burn severity moving window analysis at 100m spatial scale around the point
-FireSevMW300: burn severity moving window analysis at 300m spatial scale around the point
-FireSevMW600: burn severity moving window analysis at 600m spatial scale around the point
-FireYear.y: the year the fire burned catagorized into 4 groups: 0 = no burn, 1 = recent burn (within the last 6 years of survey window), 2 = intermediate burn (within the last 11 years of survey window), old burn (within the last 20 years of survey window)
-avgLive: average live canopy cover present
-avgDead: average dead canopy cover
-avgTotal: average total canopy cover
-totalLiveSn: total number of live trees (>23cm DBH) present
-totalLiveDen: live tree density 
-totalDeadSn: total number of snags (>23 cm DBH) 
-totalDeadDen: snag density
-totalTrees: total number of trees (live and dead)
-totaltreeDensity: density of trees (live and dead)
-avgLiveDBH: average size (DBH) of live trees
-avgDeadDBH: average size (DBH) of snags
-avgDC: average decay class
-Property: 1 = Deschutes National Forest, 2 = White River Wildlife Area
-Elev: meters above sea level
+The dataset includes point-count survey information, observer and environmental covariates, wildfire characteristics, landscape pattern metrics, and forest structure measurements. These data were collected to investigate relationships between post-fire habitat characteristics, landscape structure, and Lewis's Woodpecker occurrence.
+
+## Data Dictionary
+
+The following table describes the variables included in the dataset, organized by category.
+
+### 1. Survey Information
+
+| Variable | Description |
+|---|---|
+| `PointID` | Alphabetical code identifying the survey point |
+| `PointCode` | Numerical code identifying the survey point |
+| `TransectID` | Transect on which the survey point was located |
+| `Rep1` | First replicate of the point-count survey |
+| `Rep2` | Second replicate of the point-count survey |
+| `Rep3` | Third replicate of the point-count survey |
+| `ObserverR1` | Observer conducting replicate 1 |
+| `ObserverR2` | Observer conducting replicate 2 |
+| `ObserverR3` | Observer conducting replicate 3 |
+
+### 2. Survey Timing
+
+Julian dates and minutes since sunrise were recorded for each survey replicate. Scaled variables were centered and standardized for use in statistical analyses.
+
+| Variable | Description |
+|---|---|
+| `JDR1` | Julian date of replicate 1 |
+| `JDR2` | Julian date of replicate 2 |
+| `JDR3` | Julian date of replicate 3 |
+| `MinsSinceR1` | Minutes since sunrise when replicate 1 began |
+| `MinsSinceR2` | Minutes since sunrise when replicate 2 began |
+| `MinsSinceR3` | Minutes since sunrise when replicate 3 began |
+| `JDR1S` | Julian date of replicate 1, centered and scaled for analysis |
+| `JDR2S` | Julian date of replicate 2, centered and scaled for analysis |
+| `JDR3S` | Julian date of replicate 3, centered and scaled for analysis |
+| `MinScR1` | Minutes since sunrise for replicate 1, centered and scaled for analysis |
+| `MinsScR2` | Minutes since sunrise for replicate 2, centered and scaled for analysis |
+| `MinsScR3` | Minutes since sunrise for replicate 3, centered and scaled for analysis |
+
+### 3. Survey Conditions and Detection Covariates
+
+| Variable | Description |
+|---|---|
+| `WPR1` | Presence (1) or absence (0) of another woodpecker species during replicate 1 |
+| `WPR2` | Presence (1) or absence (0) of another woodpecker species during replicate 2 |
+| `WPR3` | Presence (1) or absence (0) of another woodpecker species during replicate 3 |
+| `WindR1` | Wind speed during replicate 1, measured using the Beaufort scale |
+| `WindR2` | Wind speed during replicate 2, measured using the Beaufort scale |
+| `WindR3` | Wind speed during replicate 3, measured using the Beaufort scale |
+
+### 4. Geographic Information
+
+| Variable | Description |
+|---|---|
+| `Latitude` | Latitude of the survey point |
+| `Longitude` | Longitude of the survey point |
+| `y_proj` | Projected latitude coordinate |
+| `x_proj` | Projected longitude coordinate |
+| `Elev` | Elevation in meters above sea level |
+| `Property` | Survey location: 1 = Deschutes National Forest; 2 = White River Wildlife Area |
+
+### 5. Fire History and Burn Severity
+
+| Variable | Description |
+|---|---|
+| `FireSev` | Categorized burn severity at the survey point, derived from the MTBS relative differenced Normalized Burn Ratio (RdNBR6) raster |
+| `FireName` | Name identifying the wildfire |
+| `FireYear.x` | Year the wildfire occurred |
+| `FireYear.y` | Fire year categorized into four groups: 0 = no burn; 1 = recent burn (within 6 years of the survey window); 2 = intermediate burn (within 11 years of the survey window); 3 = old burn (within 20 years of the survey window) |
+| `FireSevMW100` | Burn severity moving-window analysis at a 100 m spatial scale around the survey point |
+| `FireSevMW300` | Burn severity moving-window analysis at a 300 m spatial scale around the survey point |
+| `FireSevMW600` | Burn severity moving-window analysis at a 600 m spatial scale around the survey point |
+
+### 6. Landscape Pattern Metrics
+
+Landscape metrics describe the spatial configuration of burn severity classes surrounding each survey point. Metrics were calculated at three spatial scales: 100 m, 300 m, and 600 m.
+
+**Cohesion Index (`coh`)**
+
+| Variable | Description |
+|---|---|
+| `coh_c2_100` | Cohesion index of burn severity class 2 at 100 m |
+| `coh_c3_100` | Cohesion index of burn severity class 3 at 100 m |
+| `coh_c4_100` | Cohesion index of burn severity class 4 at 100 m |
+| `coh_c2_300` | Cohesion index of burn severity class 2 at 300 m |
+| `coh_c3_300` | Cohesion index of burn severity class 3 at 300 m |
+| `coh_c4_300` | Cohesion index of burn severity class 4 at 300 m |
+| `coh_c2_600` | Cohesion index of burn severity class 2 at 600 m |
+| `coh_c3_600` | Cohesion index of burn severity class 3 at 600 m |
+| `coh_c4_600` | Cohesion index of burn severity class 4 at 600 m |
+
+**Connectivity Index (`cnn`)**
+
+| Variable | Description |
+|---|---|
+| `cnn_c2_100` | Connectivity index of burn severity class 2 at 100 m |
+| `cnn_c3_100` | Connectivity index of burn severity class 3 at 100 m |
+| `cnn_c4_100` | Connectivity index of burn severity class 4 at 100 m |
+| `cnn_c2_300` | Connectivity index of burn severity class 2 at 300 m |
+| `cnn_c3_300` | Connectivity index of burn severity class 3 at 300 m |
+| `cnn_c4_300` | Connectivity index of burn severity class 4 at 300 m |
+| `cnn_c2_600` | Connectivity index of burn severity class 2 at 600 m |
+| `cnn_c3_600` | Connectivity index of burn severity class 3 at 600 m |
+| `cnn_c4_600` | Connectivity index of burn severity class 4 at 600 m |
+
+**Contiguity Index (`ctg`)**
+
+| Variable | Description |
+|---|---|
+| `ctg_c2_100` | Contiguity index of burn severity class 2 at 100 m |
+| `ctg_c3_100` | Contiguity index of burn severity class 3 at 100 m |
+| `ctg_c4_100` | Contiguity index of burn severity class 4 at 100 m |
+| `ctg_c2_300` | Contiguity index of burn severity class 2 at 300 m |
+| `ctg_c3_300` | Contiguity index of burn severity class 3 at 300 m |
+| `ctg_c4_300` | Contiguity index of burn severity class 4 at 300 m |
+| `ctg_c2_600` | Contiguity index of burn severity class 2 at 600 m |
+| `ctg_c3_600` | Contiguity index of burn severity class 3 at 600 m |
+| `ctg_c4_600` | Contiguity index of burn severity class 4 at 600 m |
+
+### 7. Forest Structure
+
+| Variable | Description |
+|---|---|
+| `avgLive` | Average live canopy cover |
+| `avgDead` | Average dead canopy cover |
+| `avgTotal` | Average total canopy cover |
+| `totalLiveSn` | Total number of live trees greater than 23 cm DBH |
+| `totalLiveDen` | Density of live trees |
+| `totalDeadSn` | Total number of snags greater than 23 cm DBH |
+| `totalDeadDen` | Density of snags |
+| `totalTrees` | Total number of live and dead trees |
+| `totaltreeDensity` | Density of live and dead trees |
+| `avgLiveDBH` | Average diameter at breast height (DBH) of live trees |
+| `avgDeadDBH` | Average diameter at breast height (DBH) of snags |
+| `avgDC` | Average snag decay class |
+
+---
+
+## Notes
+
+- Spatial scales refer to the radius around each survey point unless otherwise specified.
+- DBH = diameter at breast height.
+- MTBS = Monitoring Trends in Burn Severity.
+- RdNBR = Relative differenced Normalized Burn Ratio.
+- The `.x` and `.y` suffixes distinguish separate fire-year variables retained in the dataset.
+
+## Study Locations
+
+- Deschutes National Forest, Oregon
+- White River Wildlife Area, Oregon
